@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="OSPx:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="ContactManager.war">
+      <element id="artifact" artifact-name="OSPx:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Hibernate 5.2.3-5.2.3" />
+          <element id="library" level="project" name="Spring-4.3.4.RELEASE" />
+          <element id="library" level="project" name="Spring Security-3.2.5" />
+          <element id="library" level="project" name="Spring MVC-4.3.4.RELEASE" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

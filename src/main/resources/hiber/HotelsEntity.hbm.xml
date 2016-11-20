@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="hiber.HotelsEntity" table="hotels" schema="public" catalog="OSP">
+        <id name="hotelidint">
+            <column name="hotelidint" sql-type="serial" not-null="true"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="airportcode">
+            <column name="airportcode" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="address">
+            <column name="address" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="city">
+            <column name="city" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="stateprovince">
+            <column name="stateprovince" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="country">
+            <column name="country" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="postalcode">
+            <column name="postalcode" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="lowrate">
+            <column name="lowrate" sql-type="float4" precision="8" scale="8"/>
+        </property>
+        <property name="highrate">
+            <column name="highrate" sql-type="float4" precision="8" scale="8"/>
+        </property>
+        <property name="marketinglevel">
+            <column name="marketinglevel" sql-type="int4"/>
+        </property>
+        <property name="confidence">
+            <column name="confidence" sql-type="int4"/>
+        </property>
+        <property name="hotelmodified">
+            <column name="hotelmodified" sql-type="date"/>
+        </property>
+        <property name="propertytype">
+            <column name="propertytype" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="nativecurrency">
+            <column name="nativecurrency" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="numberofrooms">
+            <column name="numberofrooms" sql-type="int4"/>
+        </property>
+        <property name="numberofsuites">
+            <column name="numberofsuites" sql-type="int4"/>
+        </property>
+        <property name="numberoffloors">
+            <column name="numberoffloors" sql-type="int4"/>
+        </property>
+        <property name="checkintime">
+            <column name="checkintime" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="checkouttime">
+            <column name="checkouttime" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasvaletparking">
+            <column name="hasvaletparking" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hascontinentalbreakfast">
+            <column name="hascontinentalbreakfast" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasinroommovies">
+            <column name="hasinroommovies" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hassauna">
+            <column name="hassauna" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="haswhirlpool">
+            <column name="haswhirlpool" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasvoicemail">
+            <column name="hasvoicemail" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="has24Hoursecurity">
+            <column name="has24hoursecurity" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasparkinggarage">
+            <column name="hasparkinggarage" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="haselectronicroomkeys">
+            <column name="haselectronicroomkeys" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hascoffeeteamaker">
+            <column name="hascoffeeteamaker" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hassafe">
+            <column name="hassafe" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasvideocheckout">
+            <column name="hasvideocheckout" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasrestrictedaccess">
+            <column name="hasrestrictedaccess" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasinteriorroomentrance">
+            <column name="hasinteriorroomentrance" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasexteriorroomentrance">
+            <column name="hasexteriorroomentrance" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hascombination">
+            <column name="hascombination" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasfitnessfacility">
+            <column name="hasfitnessfacility" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasgameroom">
+            <column name="hasgameroom" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hastenniscourt">
+            <column name="hastenniscourt" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasgolfcourse">
+            <column name="hasgolfcourse" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasinhousedining">
+            <column name="hasinhousedining" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasinhousebar">
+            <column name="hasinhousebar" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hashandicapaccessible">
+            <column name="hashandicapaccessible" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="haschildrenallowed">
+            <column name="haschildrenallowed" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="haspetsallowed">
+            <column name="haspetsallowed" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hastvinroom">
+            <column name="hastvinroom" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasdataports">
+            <column name="hasdataports" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasmeetingrooms">
+            <column name="hasmeetingrooms" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasbusinesscenter">
+            <column name="hasbusinesscenter" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasdrycleaning">
+            <column name="hasdrycleaning" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasindoorpool">
+            <column name="hasindoorpool" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasoutdoorpool">
+            <column name="hasoutdoorpool" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasnonsmokingrooms">
+            <column name="hasnonsmokingrooms" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasairporttransportation">
+            <column name="hasairporttransportation" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasairconditioning">
+            <column name="hasairconditioning" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasclothingiron">
+            <column name="hasclothingiron" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="haswakeupservice">
+            <column name="haswakeupservice" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasminibarinroom">
+            <column name="hasminibarinroom" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasroomservice">
+            <column name="hasroomservice" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hashairdryer">
+            <column name="hashairdryer" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hascarrentdesk">
+            <column name="hascarrentdesk" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasfamilyrooms">
+            <column name="hasfamilyrooms" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="haskitchen">
+            <column name="haskitchen" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="hasmap">
+            <column name="hasmap" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="propertydescription">
+            <column name="propertydescription" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="destinationid">
+            <column name="destinationid" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="nearbyattractions">
+            <column name="nearbyattractions" sql-type="text" length="2147483647"/>
+        </property>
+    </class>
+</hibernate-mapping>
