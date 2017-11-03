@@ -1,7 +1,8 @@
 package dao;
 
-import java.util.List;
 import hiber.UsersEntity;
+
+import java.util.List;
 
 /**
  * Created by Artem on 13.11.2016.
@@ -12,4 +13,9 @@ public interface UsersDao {
     public List<UsersEntity> listContact();
 
     public void removeUser(Integer id);
+
+
+    UsersEntity getUserByUsername(String name);
+
+    void updateUser(UsersEntity user);
 }

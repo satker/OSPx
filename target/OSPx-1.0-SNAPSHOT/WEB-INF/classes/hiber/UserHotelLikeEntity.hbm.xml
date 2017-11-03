@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="hiber.UserHotelLikeEntity" table="user_hotel_like">
+        <composite-id mapped="true" class="hiber.UserHotelLikeEntityPK">
+            <key-property name="hotelidint">
+                <column name="hotelidint" sql-type="int4" not-null="true"/>
+            </key-property>
+            <key-property name="id">
+                <column name="id" sql-type="int4" not-null="true"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

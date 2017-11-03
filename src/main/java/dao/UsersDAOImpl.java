@@ -1,10 +1,13 @@
 package dao;
 
-import java.util.List;
 import hiber.UsersEntity;
+import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 /**
  * Created by Artem on 13.11.2016.
  */
@@ -13,7 +16,10 @@ public class UsersDAOImpl implements UsersDao {
     @Autowired
     private SessionFactory sessionFactory;
 
+
+
     public void addUser(UsersEntity users) {
+
         sessionFactory.getCurrentSession().save(users);
     }
 
@@ -22,6 +28,7 @@ public class UsersDAOImpl implements UsersDao {
 
         return sessionFactory.getCurrentSession().createQuery("from UsersEntity")
                 .list();
+
     }
 
     public void removeUser(Integer id) {
@@ -32,4 +39,18 @@ public class UsersDAOImpl implements UsersDao {
         }
 
     }
+
+    public UsersEntity getUserByUsername(String name) {
+        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(UsersEntity.class);
+        UsersEntity usersEntity = (UsersEntity) criteria.add(Restrictions.eq("username", name))
+                .uniqueResult();
+        return usersEntity;
+    }
+
+    @Override
+    public void updateUser(UsersEntity user) {
+        sessionFactory.getCurrentSession().update(user);
+    }
+
+
 }

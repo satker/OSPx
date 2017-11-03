@@ -1,14 +1,17 @@
 package servis;
 
-import java.util.List;
 import hiber.UsersEntity;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 /**
  * Created by Artem on 13.11.2016.
  */
 public interface UsersService {
-    public void addUser(UsersEntity users);
-    public List<UsersEntity> listContact();
-    public void removeUser(Integer id);
+    void addUser(UsersEntity users);
+    List<UsersEntity> listContact();
+    void removeUser(Integer hotelidint);
+    UsersEntity getUserByUsername(String name);
+
+    void updateUserData(UsersEntity user);
 }

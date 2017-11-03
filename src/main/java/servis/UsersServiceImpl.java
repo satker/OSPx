@@ -1,13 +1,14 @@
 package servis;
 
-import java.util.List;
-
+import dao.UsersDao;
+import hiber.UsersEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import dao.UsersDao;
-import hiber.UsersEntity;
+import java.util.List;
 
 
 /**
@@ -21,6 +22,8 @@ public class UsersServiceImpl implements UsersService{
 
     @Transactional
     public void addUser(UsersEntity users) {
+        users.setRolename("ROLE_USER");
+        users.setEnabled(1);
         usersDao.addUser(users);
     }
 
@@ -34,4 +37,24 @@ public class UsersServiceImpl implements UsersService{
     public void removeUser(Integer id) {
         usersDao.removeUser(id);
     }
+
+
+    @Transactional
+    public void updateUserData(UsersEntity user) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String name = auth.getName();
+
+        UsersEntity oldUserData = getUserByUsername(name);
+        if (oldUserData.copyNotNullFields(user)) {
+            usersDao.updateUser(oldUserData);
+        } else {
+            throw new RuntimeException(); // could be thrown something specific if you want
+        }
+    }
+
+    @Transactional
+    public UsersEntity getUserByUsername(String name) {
+        return usersDao.getUserByUsername(name);
+    }
+
 }

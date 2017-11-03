@@ -1572,87 +1572,20 @@
       <column name="viewowner" sqlType="name" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="definition" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
-    <table name="contacts_id_seq" schema="public" catalog="OSP" type="SEQUENCE">
-      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
-      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-    </table>
     <table name="hotels" schema="public" catalog="OSP" type="TABLE">
       <column name="hotelidint" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnaG90ZWxzX2hvdGVsaWRpbnRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="name" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="airportcode" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="address" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="city" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="stateprovince" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="country" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="postalcode" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="lowrate" sqlType="float4" precision="8" scale="8" nullable="true" jdbcType="7"/>
       <column name="highrate" sqlType="float4" precision="8" scale="8" nullable="true" jdbcType="7"/>
-      <column name="marketinglevel" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="confidence" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="hotelmodified" sqlType="date" precision="13" scale="0" nullable="true" jdbcType="91"/>
       <column name="propertytype" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="nativecurrency" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="numberofrooms" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="numberofsuites" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="numberoffloors" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="checkintime" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="checkouttime" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasvaletparking" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hascontinentalbreakfast" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasinroommovies" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hassauna" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="haswhirlpool" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasvoicemail" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="has24hoursecurity" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasparkinggarage" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="haselectronicroomkeys" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hascoffeeteamaker" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hassafe" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasvideocheckout" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasrestrictedaccess" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasinteriorroomentrance" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasexteriorroomentrance" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hascombination" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasfitnessfacility" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasgameroom" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hastenniscourt" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasgolfcourse" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasinhousedining" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasinhousebar" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hashandicapaccessible" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="haschildrenallowed" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="haspetsallowed" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hastvinroom" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasdataports" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasmeetingrooms" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasbusinesscenter" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasdrycleaning" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasindoorpool" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasoutdoorpool" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasnonsmokingrooms" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasairporttransportation" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasairconditioning" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasclothingiron" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="haswakeupservice" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasminibarinroom" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasroomservice" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hashairdryer" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hascarrentdesk" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasfamilyrooms" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="haskitchen" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hasmap" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="propertydescription" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="destinationid" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="nearbyattractions" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="hotels_pkey" columns="hotelidint"/>
+      <exported-key name="fk_3x0guxkq5ir38r2hceu2q2m1b" table="user_hotel_book" schema="public" catalog="OSP" columns="hotelidint"/>
+      <exported-key name="fk_9uut3rya0jabqx2ad19q66avr" table="user_hotel_like" schema="public" catalog="OSP" columns="hotelidint"/>
     </table>
     <table name="hotels_hotelidint_seq" schema="public" catalog="OSP" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -1666,16 +1599,46 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
+    <table name="s_seq" schema="public" catalog="OSP" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="user_hotel_book" schema="public" catalog="OSP" type="TABLE">
+      <column name="hotelidint" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="user_hotel_book_pkey" columns="hotelidint,id"/>
+      <foreign-key name="fk_3x0guxkq5ir38r2hceu2q2m1b" columns="hotelidint" ref-table="hotels" ref-schema="public" ref-catalog="" ref-columns="hotelidint" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_27s8d0f8akhgw3scenn4gt0f2" columns="id" ref-table="users" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="user_hotel_like" schema="public" catalog="OSP" type="TABLE">
+      <column name="hotelidint" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="user_hotel_like_pkey" columns="hotelidint,id"/>
+      <foreign-key name="fk_9uut3rya0jabqx2ad19q66avr" columns="hotelidint" ref-table="hotels" ref-schema="public" ref-catalog="" ref-columns="hotelidint" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_p79u0xij54k5ugefctwibtquh" columns="id" ref-table="users" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
     <table name="users" schema="public" catalog="OSP" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndXNlcnNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
-      <column name="name" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="username" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="mail" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="date_of_birth" sqlType="date" precision="13" scale="0" nullable="true" jdbcType="91"/>
       <column name="location" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="discription" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="call_number" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="password" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="enabled" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="rolename" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="users_pkey" columns="id"/>
+      <exported-key name="fk_27s8d0f8akhgw3scenn4gt0f2" table="user_hotel_book" schema="public" catalog="OSP" columns="id"/>
+      <exported-key name="fk_p79u0xij54k5ugefctwibtquh" table="user_hotel_like" schema="public" catalog="OSP" columns="id"/>
     </table>
     <table name="users_id_seq" schema="public" catalog="OSP" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -20098,6 +20061,11 @@
         <parameter name="$1" sqlType="text" precision="0" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
         <parameter name="$2" sqlType="xml" precision="0" scale="0" nullable="true" jdbcType="2009" type="1" index="2"/>
         <parameter name="returnValue" sqlType="bool" precision="0" scale="0" nullable="true" jdbcType="-7" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="trigger_registration" schema="public" catalog="OSP" type="2">
+      <prototype>
+        <parameter name="returnValue" sqlType="trigger" precision="0" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
       </prototype>
     </procedure>
   </data-source>
